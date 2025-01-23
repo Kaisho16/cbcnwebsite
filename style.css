@@ -1,0 +1,414 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #006937; /* Primary green color */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004a25; /* Darker green on hover */
+}
+
+.btn-secondary {
+    background-color: #e0e0e0; /* Light gray */
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #b0b0b0; /* Darker gray on hover */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #006937; /* Primary green color */
+}
+
+.give-button {
+    background-color: #006937; /* Primary green color */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.give-button:hover {
+    background-color: #004a25; /* Darker green on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') center/cover no-repeat; /* Replace with your hero image */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.schedule {
+    display: grid;
+    text-align: center;
+}
+
+
+
+/* About Section */
+.about {
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Watch Online Section */
+.watch-online {
+    background-color: #f8f8f8; /* Light background */
+    padding: 60px 0;
+}
+
+.watch-online-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Spacing between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    text-align: center;
+
+}
+
+.watch-online-col {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Each column takes equal width */
+    min-width: 300px; /* Minimum width for columns */
+}
+
+.platform {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.platform i {
+    font-size: 3rem;
+    color: #006937; /* Primary green color */
+}
+
+.platform h3 {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    margin: 0; /* Remove default margin */
+}
+
+.info a {
+    color: #006937; /* Primary green color */
+    font-weight: 700;
+    display: block; /* Link takes full width */
+    margin-bottom: 15px;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.schedule {
+    font-weight: 700;
+    margin-bottom: 5px; /* Smaller margin for schedule */
+}
+
+.info p {
+    margin-bottom: 5px; /* Smaller margin for info text */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Ministries Section */
+.ministries-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.ministry {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ministry i {
+    font-size: 2rem;
+    color: #006937; /* Primary green color */
+    margin-bottom: 10px;
+}
+
+/* Events Section */
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.event {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+    background-color: #006937; /* Primary green color */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #006937; /* Primary green color */
+    margin-right: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-content {
+        /* Allow items to wrap but stay horizontal */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+   .nav-links li {
+    /* Allow wrapping */
+        margin: 0 10px; /* Adjust margin as needed */
+        white-space: nowrap;
+    }
+    .nav-links a{
+      white-space: nowrap;
+    }
+
+    .give-button {
+        /* Maintain horizontal position */
+        margin-left: 10px; /* Adjust margin as needed */
+        margin-top: 0;
+        white-space: nowrap;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .ministries-list,
+    .events-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .event {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-date {
+        margin-bottom: 10px;
+    }
+
+    .watch-online-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .nav-links{
+        justify-content: space-around;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .ministries-list,
+    .events-list {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
