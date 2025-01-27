@@ -1,38 +1,26 @@
+/* style.css */
+
+/* =====================
+   Base Styles & Resets
+   ===================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h1, h2, h3 {
-    font-family: 'Lora', serif;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p {
-    margin-bottom: 1em;
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherit text color from parent */
 }
 
 img {
@@ -41,168 +29,305 @@ img {
     display: block;
 }
 
-a {
-    text-decoration: none;
+ul {
+    list-style: none;
 }
 
-section {
-    padding: 60px 0;
+/* =====================
+   Typography
+   ===================== */
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
 }
 
-.section-intro {
+h1 {
+    font-size: 3rem;
+    /* Increased size */
+}
+
+h2 {
+    font-size: 2.25rem;
+    /* Increased size */
+}
+
+h3 {
+    font-size: 1.75rem;
+    /* Increased size */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* =====================
+   Utility Classes
+   ===================== */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.text-center {
     text-align: center;
-    margin-bottom: 40px;
 }
+
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.py-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* =====================
+   Buttons
+   ===================== */
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
+    /* Increased padding */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    /* More rounded corners */
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Added transform transition */
+    text-align: center;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    /* Add a slight hover lift */
 }
 
 .btn-primary {
-    background-color: #006937; /* Primary green color */
+    background-color: #006937;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #004a25; /* Darker green on hover */
+    background-color: #004a25;
 }
 
 .btn-secondary {
-    background-color: #e0e0e0; /* Light gray */
+    background-color: #e0e0e0;
     color: #333;
 }
 
 .btn-secondary:hover {
-    background-color: #b0b0b0; /* Darker gray on hover */
+    background-color: #b0b0b0;
 }
 
-/* Navigation Bar */
+/* =====================
+   Navigation Bar
+   ===================== */
+
 .navbar {
     background-color: #fff;
-    padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; 
-    top: 0; 
-    z-index: 100; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .nav-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .logo img {
-    height: 50px;
+    height: 55px;
+    /* Adjusted logo height */
 }
 
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
+    margin-left: auto;
+    /* Push nav-links to the right */
+    box-sizing: border-box;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 35px;
+    /* Increased spacing */
 }
 
 .nav-links a {
     color: #333;
     font-weight: 700;
     transition: color 0.3s ease;
-    white-space: nowrap;
+    padding-bottom: 5px;
+    /* For underline effect */
+    border-bottom: 2px solid transparent;
+    /* For underline effect */
+    box-sizing: border-box;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #006937; /* Primary green color */
+    color: #006937;
+    border-bottom: 2px solid #006937;
+    /* Underline active link */
 }
 
-.give-button {
-    background-color: #006937; /* Primary green color */
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    margin-left: 20px;
+a.give-button {
+    background-color: #0d653a;
+    color: white;
+    padding: 10px 20px;
+    /* Adjusted padding */
+    border-radius: 8px;
+    /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Added transform transition */
+    box-sizing: border-box;
 }
 
 .give-button:hover {
-    background-color: #004a25; /* Darker green on hover */
+    background-color: #004a25;
+    transform: translateY(-2px);
+    /* Add a slight hover lift */
 }
 
-/* Hero Section */
+/* =====================
+   Hero Section
+   ===================== */
+
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') center/cover no-repeat; /* Replace with your hero image */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg') center/cover no-repeat;
+    /* Darker overlay */
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 20px;
+    /* Increased padding */
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
+    /* Increased width */
     margin: 0 auto;
 }
 
+.hero h1 {
+    font-size: 3.5rem;
+    /* Increased font size */
+    margin-bottom: 1rem;
+    /* Increased margin */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    /* Increased font size */
+    margin-bottom: 2rem;
+    /* Increased margin */
+}
+
+/* =====================
+   Schedule Section
+   ===================== */
 .schedule {
     display: grid;
     text-align: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
 }
 
+/* =====================
+   About Section
+   ===================== */
 
-
-/* About Section */
 .about {
     background-color: #fff;
+    padding: 3rem 0;
+    box-sizing: border-box;
 }
 
 .about-content {
     display: flex;
     align-items: center;
     gap: 40px;
+    box-sizing: border-box;
 }
 
 .about-text {
     flex: 1;
+    box-sizing: border-box;
 }
 
 .about-image {
     flex: 1;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 
 }
 
-/* Watch Online Section */
+/* =====================
+   Watch Online Section
+   ===================== */
+
 .watch-online {
-    background-color: #f8f8f8; /* Light background */
-    padding: 60px 0;
+    background-color: #f8f8f8;
+    padding: 3rem 0;
+    box-sizing: border-box;
 }
 
 .watch-online-content {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Spacing between columns */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px;
+    flex-wrap: wrap;
     text-align: center;
-
+    box-sizing: border-box;
+    flex-direction: column; /* Stack columns vertically on very small screens */
+    align-items: stretch; /* Stretch columns to full width of container */
+    flex-wrap: nowrap; /* Prevent wrapping, columns will stack vertically */
+    gap: 20px; /* Reduce gap between columns */
 }
 
 .watch-online-col {
     background-color: #fff;
     border-radius: 20px;
+    /* More rounded corners */
     padding: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Each column takes equal width */
-    min-width: 300px; /* Minimum width for columns */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Increased shadow */
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+    flex: 0 1 auto; /* Don't grow, shrink to fit content, initial width auto */
+    width: 100%; /* Make columns full width on mobile */
+    min-width: auto; /* Override min-width if set previously */
+    padding: 20px; /* Slightly reduce padding */
 }
 
 .platform {
@@ -210,205 +335,561 @@ section {
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .platform i {
     font-size: 3rem;
-    color: #006937; /* Primary green color */
+    color: #006937;
+    box-sizing: border-box;
 }
 
 .platform h3 {
     font-size: 1.8rem;
     font-family: 'Lora', serif;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .info a {
-    color: #006937; /* Primary green color */
+    color: #006937;
     font-weight: 700;
-    display: block; /* Link takes full width */
+    display: block;
     margin-bottom: 15px;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* ADDED: Force URL wrapping */
+    word-wrap: break-word;      /* ADDED: For extra browser compatibility */
 }
 
 .info a:hover {
     text-decoration: underline;
+    box-sizing: border-box;
 }
 
 .schedule {
     font-weight: 700;
-    margin-bottom: 5px; /* Smaller margin for schedule */
+    margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
 .info p {
-    margin-bottom: 5px; /* Smaller margin for info text */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
 }
 
-/* Ministries Section */
+/* =====================
+   Ministries Section
+   ===================== */
+
+.ministries {
+    padding: 3rem 0;
+    background-color: #f8f8f8;
+    /* Light background */
+    box-sizing: border-box;
+}
+
 .ministries-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Adjusted minmax */
     gap: 30px;
+    box-sizing: border-box;
 }
 
 .ministry {
     background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 25px;
+    /* Increased padding */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Increased shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Added transition */
+    box-sizing: border-box;
+}
+
+.ministry:hover {
+    transform: translateY(-5px);
+    /* Add a slight hover lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Increase shadow on hover */
+    box-sizing: border-box;
 }
 
 .ministry i {
-    font-size: 2rem;
-    color: #006937; /* Primary green color */
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    /* Increased icon size */
+    color: #006937;
+    margin-bottom: 15px;
+    /* Increased margin */
+    box-sizing: border-box;
 }
 
-/* Events Section */
+.ministry h3 {
+    margin-bottom: 10px;
+    /* Added margin */
+    box-sizing: border-box;
+}
+
+/* =====================
+   Events Section
+   ===================== */
+
+.events {
+    padding: 3rem 0;
+    box-sizing: border-box;
+}
+
 .events-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Adjusted minmax */
     gap: 30px;
+    box-sizing: border-box;
 }
 
 .event {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
+    /* Rounded corners */
     padding: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Increased shadow */
+    box-sizing: border-box;
 }
 
 .event-date {
-    background-color: #006937; /* Primary green color */
+    background-color: #006937;
     color: #fff;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    /* Rounded corners */
     text-align: center;
     min-width: 70px;
+    box-sizing: border-box;
 }
 
 .event-date .month {
     display: block;
     font-size: 1rem;
     font-weight: 700;
+    box-sizing: border-box;
 }
 
 .event-date .day {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    /* Increased font size */
     font-weight: 700;
     line-height: 1;
+    box-sizing: border-box;
 }
 
-/* Contact Section */
+.event-details h3 {
+    margin: 0;
+    /* Remove default margin */
+    box-sizing: border-box;
+}
+
+/* =====================
+   Contact Section
+   ===================== */
+
+.contact {
+    padding: 3rem 0;
+    background-color: #f8f8f8;
+    /* Light background */
+    box-sizing: border-box;
+}
+
 .contact-info {
     margin-bottom: 30px;
+    box-sizing: border-box;
 }
 
 .contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .contact-info i {
-    color: #006937; /* Primary green color */
+    color: #006937;
     margin-right: 10px;
+    box-sizing: border-box;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 180px;
+    /* Increased height */
+    box-sizing: border-box;
 }
 
-/* Footer */
+.contact-form button[type="submit"] {
+    width: 100%;
+    font-family: 'Lora', serif;
+    outline: black;
+    color: white;
+    background-color: #004a25;
+    box-shadow: #b0b0b0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: medium;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* =====================
+   Footer
+   ===================== */
+
 .footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    box-sizing: border-box;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .nav-content {
-        /* Allow items to wrap but stay horizontal */
-        flex-wrap: wrap;
-        justify-content: center;
+/* =====================
+   Media Queries
+   ===================== */
+
+/* Smaller Desktop / Large Tablet */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+        box-sizing: border-box;
     }
-   .nav-links li {
-    /* Allow wrapping */
-        margin: 0 10px; /* Adjust margin as needed */
-        white-space: nowrap;
-    }
-    .nav-links a{
-      white-space: nowrap;
+
+    .nav-links li {
+        margin-left: 15px;
+        box-sizing: border-box;
     }
 
     .give-button {
-        /* Maintain horizontal position */
-        margin-left: 10px; /* Adjust margin as needed */
-        margin-top: 0;
-        white-space: nowrap;
+        margin-left: 15px;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        box-sizing: border-box;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        box-sizing: border-box;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .nav-links li {
+        margin: 10px;
+        white-space: normal;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .give-button {
+        margin-left: 0;
+        margin-top: 10px;
+        box-sizing: border-box;
     }
 
     .about-content {
         flex-direction: column;
+        box-sizing: border-box;
     }
-    
+
     .ministries-list,
     .events-list {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        box-sizing: border-box;
     }
 
     .event {
         flex-direction: column;
         text-align: center;
+        box-sizing: border-box;
     }
 
     .event-date {
         margin-bottom: 10px;
+        box-sizing: border-box;
     }
 
-    .watch-online-content{
+    .watch-online-content {
         flex-wrap: wrap;
         justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 20px;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        box-sizing: border-box;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .hero-content{
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1{
+        margin-top: 0;
+        box-sizing: border-box;
     }
 }
 
-/* Media query for smaller screens (e.g., mobile devices) */
-@media (max-width: 480px) {
-  .nav-links{
-        justify-content: space-around;
+/* Mobile */
+@media (max-width: 500px) {
+    .logo{
+        position: relative;
+        z-index: 101;
+        box-sizing: border-box;
     }
+
+    .nav-content{
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden */
+        position: fixed; /* Full-screen overlay */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95); /* Dark background, almost opaque */
+        z-index: 999; /* Ensure it's on top */
+        flex-direction: column;
+        align-items: center; /* Center items horizontally within container */
+        justify-content: center; /* CHANGED: Center items vertically */
+        padding-top: 60px; /* Add padding at the top for content to start below navbar */
+        box-sizing: border-box;
+        opacity: 0; /* Initially transparent */
+        pointer-events: none; /* Make it non-interactive when hidden */
+        transition: opacity 0.3s ease-out; /* Fade-in transition */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show as flex container */
+        opacity: 1; /* Fade in */
+        pointer-events: auto; /* Make it interactive when shown */
+        justify-content: center; /* Center items vertically */
+        align-items: center;      /* Center items horizontally within container */
+    }
+
+    .nav-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Make the UL full width within nav-links */
+        display: flex;
+        flex-direction: column; /* Stack list items vertically */
+        align-items: stretch; /* Ensure list items stretch to full width */
+        box-sizing: border-box;
+    }
+
+
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav-links a {
+        color: white; /* White text color */
+        padding: 16px 20px; /* Increased padding */
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+        box-sizing: border-box;
+        text-align: left; /* Left align text */
+        position: relative; /* For arrow icon positioning */
+        transition: background-color 0.2s ease;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none; /* Remove border from the last link */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.05); /* Slightly lighter hover background */
+    }
+
+    /* Optional: Right arrow icon using pseudo-element - you can customize this further */
+    .nav-links a::after {
+        content: '\203A'; /* Unicode for a right-pointing angle bracket > */
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2em;
+        color: rgba(255, 255, 255, 0.7); /* Slightly lighter arrow color */
+        box-sizing: border-box;
+    }
+
+
+    .give-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hamburger-menu {
+        display: flex !important; /* Force display flex */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 100; /* Keep hamburger below the full screen menu when open */
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+    }
+
+    .hamburger-menu .bar {
+        height: 3px;
+        width: 100%;
+        background-color: black;
+        transition: 0.3s ease;
+        box-sizing: border-box;
+    }
+
     h1 {
         font-size: 2rem;
+        box-sizing: border-box;
     }
 
     h2 {
         font-size: 1.8rem;
+        box-sizing: border-box;
     }
 
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        box-sizing: border-box;
     }
 
     .ministries-list,
     .events-list {
-        grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .hero{
+        padding-top: 60px;
+        box-sizing: border-box;
+    }
+
+    .hero-content{
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1{
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        box-sizing: border-box;
+    }
+    .hero p{
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+    }
+
+    .btn{
+        padding: 10px 15px;
+        box-sizing: border-box;
     }
 }
 
-html {
-    scroll-behavior: smooth;
+/* =====================
+   Animations
+   ===================== */
+
+/* Add subtle animations on section load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out;
 }
